@@ -1,6 +1,6 @@
 const {
-  addBook,
   getAllBooks,
+  addBook,
   getBookById,
   updateBook,
   deleteBook,
@@ -11,6 +11,11 @@ const routes = [
     method: "GET",
     path: "/books",
     handler: getAllBooks,
+  },
+  {
+    method: "POST",
+    path: "/books",
+    handler: addBook,
   },
   {
     method: "GET",
@@ -26,11 +31,6 @@ const routes = [
     method: "DELETE",
     path: "/books/{bookId}",
     handler: deleteBook,
-  },
-  {
-    method: "POST",
-    path: "/books",
-    handler: addBook,
   },
 ];
 
